@@ -20,7 +20,7 @@ use Assetic\Asset\AssetInterface;
  */
 class AssetManager
 {
-    private $assets = array();
+    protected $assets = array();
 
     /**
      * Gets an asset by name.
