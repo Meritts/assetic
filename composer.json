@@ -1,9 +1,9 @@
 {
-    "name": "kriswallsmith/assetic",
+    "name": "msilvagarcia/assetic",
     "minimum-stability": "dev",
     "description": "Asset Management for PHP",
     "keywords": [ "assets", "compression", "minification" ],
-    "homepage": "https://github.com/kriswallsmith/assetic",
+    "homepage": "https://github.com/msilvagarcia/assetic",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -11,6 +11,10 @@
             "name": "Kris Wallsmith",
             "email": "kris.wallsmith@gmail.com",
             "homepage": "http://kriswallsmith.net/"
+        },
+        {
+            "name": "Marcos Garcia",
+            "email": "marcos.asgarcia@gmail.com"
         }
     ],
     "require": {
