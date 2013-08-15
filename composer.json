@@ -1,5 +1,5 @@
 {
-    "name": "msilvagarcia/assetic",
+    "name": "meritt/assetic",
     "minimum-stability": "dev",
     "description": "Asset Management for PHP",
     "keywords": [ "assets", "compression", "minification" ],
