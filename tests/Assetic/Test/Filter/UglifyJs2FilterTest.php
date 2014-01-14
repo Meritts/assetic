@@ -3,7 +3,7 @@
 /*
  * This file is part of the Assetic package, an OpenSky project.
  *
- * (c) 2010-2013 OpenSky Project Inc
+ * (c) 2010-2014 OpenSky Project Inc
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -66,7 +66,7 @@ class UglifyJs2FilterTest extends FilterTestCase
         $this->filter->setCompress(true);
         $this->filter->filterDump($this->asset);
 
-        $this->assertContains('var var2', $this->asset->getContent());
+        $this->assertContains('var foo', $this->asset->getContent());
         $this->assertNotContains('var var1', $this->asset->getContent());
     }
 

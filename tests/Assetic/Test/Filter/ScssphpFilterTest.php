@@ -3,7 +3,7 @@
 /*
  * This file is part of the Assetic package, an OpenSky project.
  *
- * (c) 2010-2013 OpenSky Project Inc
+ * (c) 2010-2014 OpenSky Project Inc
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -97,6 +97,23 @@ EOF;
         $filter->filterLoad($asset);
 
         $this->assertEquals("#test {\n  color: red; }\n", $asset->getContent(), 'Import paths are correctly used');
+    }
+
+
+    public function testRegisterFunction()
+    {
+        $asset = new StringAsset('.foo{ color: bar(); }');
+        $asset->load();
+        
+        $filter = $this->getFilter();
+        $filter->registerFunction('bar',function(){ return 'red';});
+        $filter->filterLoad($asset);
+        
+        $expected = new StringAsset('.foo{ color: red;}');
+        $expected->load();
+        $filter->filterLoad($expected);
+
+        $this->assertEquals($expected->getContent(), $asset->getContent(), 'custom function can be registered');
     }
 
     // private
