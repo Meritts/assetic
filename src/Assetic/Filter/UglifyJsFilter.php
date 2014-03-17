@@ -100,6 +100,10 @@ class UglifyJsFilter extends BaseNodeFilter
 
         if ($this->beautify) {
             $pb->add('--beautify');
+            $pb->add('beautify=true,quote_keys=true');
+        } else {
+            $pb->add('--beautify');
+            $pb->add('beautify=false,quote_keys=true');
         }
 
         if ($this->unsafe) {
